@@ -15,11 +15,48 @@
       padding: 20px;
       font-family: Arial, sans-serif;
     }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin: 10px;
+    }
+
+    .button:hover {
+      background-color: #2980b9;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    /* Wrapper div for the buttons */
+    .button-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   </style>
 </head>
 
 <body>
-  <h1>Eris Discord Bot - Privacy Policy</h1>
+  <div class="center">
+    <h1>Eris Bot - Privacy Policy</h1>
+    <!-- Animated Button to Scroll to Privacy Policy -->
+    <button class="button" onclick="scrollToPrivacy()">Read Privacy Policy</button>
+    <!-- Animated Button to Redirect to Example Website -->
+    <a href="https://discord.com/api/oauth2/authorize?client_id=1127678381798994000&scope=applications.commands+bot&permissions=545195949174" class="button">Add Eris to your server</a>
+  </div>
+
+  <!-- Centered button at the bottom -->
+  <div class="center button-wrapper"> <!-- Added the button-wrapper class -->
+    <a href="https://discord.gg/HuzKUpSJ2x" class="button">Support Discord Server</a>
+  </div>
 
   <h2>Information We Collect</h2>
   <p>
@@ -32,7 +69,7 @@
     <li>Usage statistics to improve our services and user experience.</li>
   </ul>
 
-  <h2>How We Use Your Information</h2>
+  <h2 id="terms">How We Use Your Information</h2>
   <p>
     The information collected is used solely for the purpose of providing and improving the Eris bot's functionality. We
     may use your information in the following ways:
@@ -56,7 +93,7 @@
     Once the data is no longer needed, we will securely delete or anonymize it.
   </p>
 
-  <h2>Security</h2>
+  <h2></h2>Security</h2>
   <p>
     We take reasonable measures to protect your information from unauthorized access, disclosure, alteration, or
     destruction. However, no data transmission over the internet or electronic storage is entirely secure. Please
@@ -84,6 +121,14 @@
   <p>
     If you have any questions or concerns regarding this Privacy Policy, you may contact us via Discord at burlone413.
   </p>
+
+  <!-- Optional JavaScript to scroll to the Privacy Policy section -->
+  <script>
+    function scrollToPrivacy() {
+      const privacySection = document.getElementById('terms');
+      privacySection.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 
 </body>
 
